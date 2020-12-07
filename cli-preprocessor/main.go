@@ -36,7 +36,6 @@ func main() {
 	rabbitConfig := ocrworker.DefaultConfigFlagsOverride(flagFunc)
 
 	// inifinite loop, since sometimes worker <-> rabbitmq connection
-	// gets broken.  see https://github.com/tleyden/open-ocr/issues/4
 	for {
 		logg.LogTo("PREPROCESSOR_WORKER", "Creating new Preprocessor Worker")
 		preprocessorWorker, err := ocrworker.NewPreprocessorRpcWorker(
