@@ -1,7 +1,3 @@
-[![GoDoc](http://godoc.org/github.com/tleyden/open-ocr?status.png)](http://godoc.org/github.com/tleyden/open-ocr) 
-[![Join the chat at https://gitter.im/tleyden/open-ocr](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/tleyden/open-ocr?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-
 OpenOCR makes it simple to host your own OCR REST API.
 
 The heavy lifting OCR work is handled by [Tesseract OCR](https://code.google.com/p/tesseract-ocr/).
@@ -185,14 +181,6 @@ $ curl -X POST -H "Content-Type: application/json" -d '{"img_base64":"<YOUR BASE
 
 See the [REST API docs](http://docs.openocr.apiary.io/) and the [Go REST client](http://github.com/tleyden/open-ocr-client) for details.
 
-# Client Libraries
-
-These client libraries make it easier to invoke the REST API:
-
-* **Go** [open-ocr-client](https://github.com/tleyden/open-ocr-client)
-* **C#** [open-ocr-dotnet](https://github.com/alex-doe/open-ocr-dotnet)
-* **Java** [open-ocr-java](https://github.com/faLekGG/JavaOpenOCR)
-
 # Uploading local files using curl
 
 The supplied `docs/upload-local-file.sh` provides an example of how to upload a local file using curl with `multipart/related` encoding of the json and image data:
@@ -204,7 +192,6 @@ The supplied `docs/upload-local-file.sh` provides an example of how to upload a 
 # Community
 
 * Follow [@OpenOCR](https://twitter.com/openocr) on Twitter
-* Checkout the [Github issue tracker](https://github.com/tleyden/open-ocr/issues)
 
 
 # License
