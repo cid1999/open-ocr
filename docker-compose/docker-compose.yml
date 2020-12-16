@@ -4,6 +4,7 @@ services:
 # Start messaging broker
   rabbitmq:
     image: rabbitmq:3.6.5-management
+    restart: always
     ports:
       - "5672:5672"
       - "15672:15672" #Management Server
@@ -14,6 +15,7 @@ services:
   # Start transformation worker
   strokewidthtransform:
     image: cid1999/open-ocr-preprocessor
+    restart: always
     volumes:
       - ./scripts/:/opt/open-ocr/
     dns: ["8.8.8.8"]
@@ -24,6 +26,7 @@ services:
   # Start OCR worker
   openocrworker:
     image: cid1999/open-ocr
+    restart: always
     volumes:
       - ./scripts/:/opt/open-ocr/
     dns: ["8.8.8.8"]
@@ -34,6 +37,7 @@ services:
   # Start http server
   openocr:
     image: cid1999/open-ocr
+    restart: always
     volumes:
       - ./scripts/:/opt/open-ocr/
     ports:
